@@ -1,0 +1,94 @@
+.heroContainer {
+  background-image: url('/images/looper_bg.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 0 2rem;
+  height: 41rem;
+
+  background-color: var(--gray-800);
+}
+
+.heroContent {
+  max-width: 1120px;
+  height: 41rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  font-weight: 600;
+  text-transform: uppercase;
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    color: var(--cyan-500);
+    font-size: 4.26rem;
+  }
+}
+
+.heroButtons {
+  margin-top: 4rem;
+
+  a + a {
+    margin-left: 1.5rem;
+  }
+
+  button {
+    --border-width: 2px;
+    --border-radius: 4px;
+
+    all: unset;
+    box-sizing: border-box;
+
+    border: 0;
+    border-radius: var(--border-radius);
+
+    position: relative;
+    
+    z-index: 1;
+  }
+
+  .purpleCyanBorder {
+    background: linear-gradient(to right, var(--purple-500), var(--cyan-500));
+  }
+
+  .margentaPurpleBorder {
+    background: linear-gradient(to right, var(--magenta-500), var(--purple-500));
+  }
+
+  button::before {
+    content: '';
+    display: block;
+
+    height: calc(100% - calc(var(--border-width) * 2));
+    width: calc(100% - calc(var(--border-width) * 2));
+
+    background: var(--gray-800);
+
+    position: absolute;
+    top: var(--border-width);
+    left: var(--border-width);
+
+    border-radius: calc(var(--border-radius) - var(--border-width));
+    
+    z-index: -1;
+  }
+
+  .buttonContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem 2rem;
+
+    p {
+      font-size: 1rem;
+      margin-left: 1rem;
+      text-transform: none;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.headerContainer {
+  height: 7rem;
+  background: var(--gray-800);
+  padding: 0 2rem;
+}
+
+.headerContent {
+  max-width: 1120px;
+  height: 7rem;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 2px solid var(--gray-700);
+
+  .title {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--cyan-500);
+  }
+
+  nav {
+    max-width: 50%;
+
+    a {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: var(--gray-500);
+      
+      & + a {
+        margin-left: 4rem;
+      }
+
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--cyan-500);
+      }
+    }
+  }
+}
