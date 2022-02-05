@@ -5,9 +5,9 @@ export function Hero() {
     <div className={styles.heroContainer}>
       <div className={styles.heroContent}>
         <div className={styles.heroText}>
-          <p>Olá, eu sou</p>
+          <p>Olá, me chamo</p>
           <h2>Lucas Goulart</h2>
-          <p>desenvolvedor front-end</p>
+          <p>e sou desenvolvedor front-end</p>
         </div>
         <div className={styles.heroButtons}>
           <a 
