@@ -4,9 +4,9 @@ export function About() {
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.aboutContent}>
-        <section>
+        <section id='sobre-mim'>
             <img 
-              src="/images/profile.jpeg" 
+              src="/assets/images/avatar.png" 
               alt="Lucas Goulart" 
               className={styles.profilePicture} 
             />
@@ -22,7 +22,7 @@ export function About() {
                   <button className={styles.margentaPurpleBorder}>
                     <div className={styles.buttonContent}>
                       <img 
-                        src='/icons/download-cloud.svg' alt='Currículo'
+                        src='/assets/icons/download-cloud.svg' alt='Currículo'
                       />
                       <p>Currículo</p>
                     </div>
@@ -31,7 +31,7 @@ export function About() {
                 <a href="#">
                   <button className={styles.purpleCyanBorder}>
                     <div className={styles.buttonContent}>
-                      <img src='/icons/mail.svg' alt='E-mail' />
+                      <img src='/assets/icons/mail.svg' alt='E-mail' />
                       <p>E-mail</p>
                     </div>
                   </button>

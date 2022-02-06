@@ -1,0 +1,127 @@
+.projectsContainer {
+  background: var(--gray-700);
+
+  padding: 0 2rem;
+}
+
+.projectsContent {
+  max-width: 1120px;
+  margin: 0 auto;
+
+  section {
+    padding: 6rem 0;
+
+    .projectsList {
+      display: flex;
+      flex-wrap: wrap;
+
+      > div {
+        max-width: 50%;
+        margin-bottom: 4rem;
+
+      }
+    }
+
+    .projectsThumbnail {
+
+      img {
+        height: 200px;
+        border-left: 4px solid var(--cyan-500);
+        border-radius: 4px;
+      }
+    }
+
+    .projectDetails {
+      margin-top: 1rem;
+      
+      h6 {
+        font-weight: 500;
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+      }
+
+      > p {
+        color: var(--gray-500);
+        font-size: 1rem;
+        font-weight: 300;
+        margin-bottom: 0.4rem;
+        height: 4rem;
+        width: 80%;
+      }
+
+      span {
+        color: var(--cyan-500);
+        font-size: 0.7rem;
+      }
+      
+      .projectsButton {
+        display: flex;
+
+        a + a {
+          margin-left: 1.5rem;
+        }
+      }
+
+      a {
+        margin-top: 2rem;
+        display: block;
+
+        button {
+          --border-width: 2px;
+          --border-radius: 4px;
+      
+          all: unset;
+          box-sizing: border-box;
+      
+          border: 0;
+          border-radius: var(--border-radius);
+      
+          position: relative;
+          
+          z-index: 1;
+        }
+      
+        .purpleCyanBorder {
+          background: linear-gradient(to right, var(--purple-500), var(--cyan-500));
+        }
+      
+        .margentaPurpleBorder {
+          background: linear-gradient(to right, var(--magenta-500), var(--purple-500));
+        }
+      
+        button::before {
+          content: '';
+          display: block;
+      
+          height: calc(100% - calc(var(--border-width) * 2));
+          width: calc(100% - calc(var(--border-width) * 2));
+      
+          background: var(--gray-700);
+      
+          position: absolute;
+          top: var(--border-width);
+          left: var(--border-width);
+      
+          border-radius: calc(var(--border-radius) - var(--border-width));
+          
+          z-index: -1;
+        }
+      
+        .buttonContent {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      
+          padding: 1rem 2rem;
+      
+          p {
+            font-size: 1rem;
+            margin-left: 1rem;
+            text-transform: none;
+          }
+        }
+      }
+    }
+
+  }
+}

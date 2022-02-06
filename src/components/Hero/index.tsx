@@ -16,7 +16,7 @@ export function Hero() {
           >
             <button className={styles.purpleCyanBorder}>
               <div className={styles.buttonContent}>
-                <img src='/icons/linkedin.svg' alt='LinkedIn' />
+                <img src='/assets/icons/linkedin.svg' alt='LinkedIn' />
                 <p>LinkedIn</p>
               </div>
             </button> 
@@ -27,7 +27,7 @@ export function Hero() {
           >
             <button className={styles.margentaPurpleBorder}>
               <div className={styles.buttonContent}>
-                <img src='/icons/github.svg' alt='GitHub' />
+                <img src='/assets/icons/github.svg' alt='GitHub' />
                 <p>GitHub</p>
               </div>
             </button> 

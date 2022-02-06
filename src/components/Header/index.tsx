@@ -6,10 +6,10 @@ export function Header() {
       <div className={styles.headerContent}>
         <h1 className={styles.title}>Goulart LCS</h1>
         <nav>
-          <a href="#">Home</a>
-          <a href="#">Sobre Mim</a>
-          <a href="#">Experiência</a>
-          <a href="#">Projetos</a>
+          <a href="/">Home</a>
+          <a href="#sobre-mim">Sobre Mim</a>
+          <a href="#experiencias">Experiências</a>
+          <a href="#projetos">Projetos</a>
         </nav>
       </div>
     </header>

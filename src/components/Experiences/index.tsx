@@ -20,7 +20,7 @@ export function Experiences({ experiences }) {
     <>
       <div className={styles.experiencesContainer}>
         <div className={styles.experiencesContent}>
-          <section>
+          <section id='experiencias'>
             <h1 className='sectionTitle'>Experiências</h1>
 
             <div className={styles.experiencesList}>
@@ -54,6 +54,7 @@ export function Experiences({ experiences }) {
                   <p>{experienceSelected.description}</p>
                 </div>
               }
+              
             </div>
 
           </section>
