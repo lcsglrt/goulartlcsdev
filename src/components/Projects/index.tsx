@@ -32,17 +32,19 @@ export function Projects({ projects }: Projects) {
                     <p>{project.description}</p>
                     <span>{project.tech}</span>
                     <div className={styles.projectsButton}>
-                      <a 
-                        href={project.demo_link}
-                        target="_blank"
-                      >
-                        <button className={styles.margentaPurpleBorder}>
-                          <div className={styles.buttonContent}>
-                            <img src='/assets/icons/link.svg' alt='Visualizar' />
-                            <p>Visualizar</p>
-                          </div>
-                        </button> 
-                      </a>
+                      {project.demo_link ? 
+                        <a 
+                          href={project.demo_link}
+                          target="_blank"
+                        >
+                          <button className={styles.margentaPurpleBorder}>
+                            <div className={styles.buttonContent}>
+                              <img src='/assets/icons/link.svg' alt='Visualizar' />
+                              <p>Visualizar</p>
+                            </div>
+                          </button> 
+                        </a> : null
+                      }
                       <a 
                         href={project.repo_link}
                         target="_blank"

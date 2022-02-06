@@ -32,12 +32,12 @@ interface ProjectsProps {
   projects: Project[],
 }
 
-export default function Home({ experiences, projects }) {
+export default function Home({ experiences, projects, resume }) {
   return (
     <>
       <main>
         <Hero />
-        <About />
+        <About resume={resume} />
         <Experiences experiences={experiences} />
         <Projects projects={projects} />
       </main>
@@ -49,18 +49,16 @@ export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
 
   const response = await prismic.query<any>(
-    [Prismic.predicates.any('document.type', ['experience', 'projects'])], 
+    [Prismic.predicates.any('document.type', ['experience', 'projects', 'resume'])], 
     {
       orderings: '[document.last_publication_date desc]'
     }
   );
 
-  console.log(response.results);
-  
-
   const filterExperiences = response.results.filter(res => res.type === 'experience').map(res => res.data);
   const filterProjects = response.results.filter(res => res.type === 'projects').map(res => res.data);
-  
+  const filterResume = response.results.filter(res => res.type === 'resume').map(res => res.data.resume);
+
   const experiences = filterExperiences.map(experience => {
     return {
       company: RichText.asText(experience.company),
@@ -76,15 +74,18 @@ export const getStaticProps: GetStaticProps = async () => {
       title: RichText.asText(project.title),
       description: RichText.asText(project.description),
       tech: project.tech,
-      demo_link: project.demo_link.url,
+      demo_link: project.demo_link.url ?? null,
       repo_link: project.repo_link.url
     }
   });  
-  
+
+  const resume = filterResume.map(resume => resume.url);
+ 
   return {
     props: { 
       experiences,
-      projects
+      projects,
+      resume
     }
   }
 }

@@ -1,0 +1,32 @@
+.footerContainer {
+  background: var(--gray-800);
+
+  padding: 0 2rem;
+}
+
+.footerContent {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--gray-500);
+
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 1rem;
+      margin-left: 0.5rem;
+    }
+
+    span:hover {
+      color: var(--cyan-500);
+    }
+  }
+}

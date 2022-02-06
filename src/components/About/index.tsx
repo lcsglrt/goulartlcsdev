@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 
-export function About() {
+export function About({ resume }) {
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.aboutContent}>
@@ -18,7 +18,7 @@ export function About() {
                 ...
               </div> */}
               <div className={styles.aboutButtons}>
-                <a href="#">
+                <a href={resume} target="_blank">
                   <button className={styles.margentaPurpleBorder}>
                     <div className={styles.buttonContent}>
                       <img 
@@ -28,7 +28,7 @@ export function About() {
                     </div>
                   </button>
                 </a>
-                <a href="#">
+                <a href="mailto:lucas@goulartlcs.dev">
                   <button className={styles.purpleCyanBorder}>
                     <div className={styles.buttonContent}>
                       <img src='/assets/icons/mail.svg' alt='E-mail' />
