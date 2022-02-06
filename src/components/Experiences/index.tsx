@@ -1,8 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 
-export function Experiences() {
-  const [showExperience, setShowExperience] = useState('');
+type ExperiencesProps ={
+  company: string,
+  role: string,
+  description: string,
+  period: string
+}
+
+export function Experiences({ experiences }) {
+  const [experienceSelected, setExperienceSeletected] = useState({} as ExperiencesProps);
+  
+
+  useEffect(() => {
+    setExperienceSeletected(experiences[0]);
+  }, []);
 
   return (
     <>
@@ -14,37 +26,34 @@ export function Experiences() {
             <div className={styles.experiencesList}>
               <aside>
                 <ul>
-                  <li className={showExperience === 'combatinfo' ? styles.selected : ''}>
-                    <button 
-                      type='button' 
-                      onClick={() => setShowExperience('combatinfo')}
-                    >
-                      Combat Informática
-                    </button>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Adrenalina Motos
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Autônomo
-                    </a>
-                  </li>
+                  { 
+                    experiences.map(experience => (
+                      <li 
+                        key={experience.company}
+                        className={experienceSelected.company === experience.company ? styles.selected : ''}
+                      >
+                        <button 
+                          type='button' 
+                          onClick={() => setExperienceSeletected(experience)}
+                        >
+                          {experience.company}
+                        </button>
+                      </li>
+                    ))
+                  }
                 </ul>
               </aside>
 
-              <div className={styles.experienceDetails}>
-                <div>
-                  <h4>Assistente de E-Commerce</h4>
-                  <time>Nov 2020 - Mar 2021</time>
+              {
+                <div className={styles.experienceDetails}>
+                  <div>
+                    <h4>{experienceSelected.role}</h4>
+                    <time>{experienceSelected.period}</time>
+                  </div>
+                  <h6>{experienceSelected.company}</h6>
+                  <p>{experienceSelected.description}</p>
                 </div>
-                <h6>Combat Informática</h6>
-                <p>
-                  Responsável pela criação de conteúdo das mídias sociais, material digital e gráfico como artes para Instagram, banners, anúncios, flyers, certificados e edição de imagem de produtos para a loja virtual.
-                </p>
-              </div>
+              }
             </div>
 
           </section>

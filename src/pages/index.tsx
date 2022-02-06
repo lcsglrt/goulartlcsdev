@@ -18,7 +18,7 @@ interface ExperiencesProps {
   experiences: Experience[],
 }
 
-export default function Home({ experiences }: ExperiencesProps) {
+export default function Home({ experiences}: ExperiencesProps) {
   return (
     <>
       <main>
@@ -51,6 +51,9 @@ export const getStaticProps: GetStaticProps = async () => {
       period: RichText.asText(experience.data.period)
     }
   });
+
+  console.log(experiences);
+  
 
   return {
     props: { experiences }
