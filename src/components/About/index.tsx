@@ -15,7 +15,7 @@ export function About({ resume }) {
           >
             <Image 
               className={styles.profileImage}
-              src="/assets/images/profile.jpeg" 
+              src="/assets/images/avatar.jpg" 
               alt="Lucas Goulart"
               width={500}
               height={500}
