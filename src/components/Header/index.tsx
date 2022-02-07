@@ -18,7 +18,11 @@ export function Header() {
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
-        <h1 className={styles.title}>Goulart LCS</h1>
+        <Link href='/'>
+          <a>
+            <h1 className={styles.title}>Goulart LCS</h1>
+          </a>
+        </Link>
         <nav>
           <Link href='/'>Home</Link>
           <Link href='#sobre-mim'>Sobre Mim</Link>
