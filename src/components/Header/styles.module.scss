@@ -42,3 +42,43 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .headerContent {
+    nav {
+      display: none;
+    }
+
+    .mobileMenu {
+      button {
+        all: unset;
+      }
+
+      .reactMenuModalOverlay {
+        background: red
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          color: red
+        }
+      }
+    }
+    
+  }
+}
+
+@media (min-width: 768px) {
+  .headerContainer {
+    nav {
+      max-width: 80%;
+    }
+
+    .mobileMenu {
+      display: none;
+    }
+  }
+}
