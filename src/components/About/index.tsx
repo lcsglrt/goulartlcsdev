@@ -24,7 +24,9 @@ export function About({ resume }) {
             <div>
               <h1 className='sectionTitle'>Sobre Mim</h1>
               <h3>Colombo, Paraná</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ratione porro dolores ipsum, maiores dolor illum cupiditate tenetur rerum nobis temporibus debitis necessitatibus rem explicabo facere veniam, laborum quaerat sint?</p>
+              <p>
+                Atualmente estou em início de carreira e sigo com estudo contínuo desenvolvendo side  projects para praticar e me especializar mais nas tecnologias de front-end
+              </p>
               {/* <div className={styles.aboutSocial}>
                 ...
               </div> */}
