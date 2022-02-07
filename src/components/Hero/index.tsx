@@ -15,7 +15,7 @@ export function Hero() {
           <Link 
             href='https://www.linkedin.com/in/goulartlcs'
           >
-            <a target='_blank'>
+            <a target='_blank' rel="noreferrer">
               <button className={styles.purpleCyanBorder}>
                 <div className={styles.buttonContent}>
                   <Image 
@@ -33,7 +33,7 @@ export function Hero() {
             href='https://github.com/goulartlcs'
           >
             <a 
-              target="_blank"
+              target="_blank" rel="noreferrer"
             >
               <button className={styles.margentaPurpleBorder}>
                 <div className={styles.buttonContent}>

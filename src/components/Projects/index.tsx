@@ -35,7 +35,7 @@ export function Projects({ projects }: Projects) {
                       {project.demo_link ? 
                         <a 
                           href={project.demo_link}
-                          target="_blank"
+                          target="_blank" rel="noreferrer"
                         >
                           <button className={styles.margentaPurpleBorder}>
                             <div className={styles.buttonContent}>
@@ -47,7 +47,7 @@ export function Projects({ projects }: Projects) {
                       }
                       <a 
                         href={project.repo_link}
-                        target="_blank"
+                        target="_blank" rel="noreferrer"
                       >
                         <button className={styles.margentaPurpleBorder}>
                           <div className={styles.buttonContent}>

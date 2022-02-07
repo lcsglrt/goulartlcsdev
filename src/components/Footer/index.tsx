@@ -9,7 +9,7 @@ export function Footer() {
       <div className={styles.footerContent}>
         <div>
           <Link href="https://instagram.com/goulartlcs/">
-            <a target="_target">
+            <a target="_target" rel="noreferrer">
               ©{year} - Desenvolvido por <span>Lucas Goulart</span>
             </a>
           </Link>
@@ -17,7 +17,7 @@ export function Footer() {
         <div>
           Design by
           <Link href="https://instagram.com/iuricode/">
-            <a target="_target">
+            <a target="_target" rel="noreferrer">
               <Image 
                 className={styles.logoIuriCode}
                 width={24}
