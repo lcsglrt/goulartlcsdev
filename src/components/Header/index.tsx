@@ -29,7 +29,7 @@ export function Header() {
           <Link href='#experiencias'>Experiências</Link>
           <Link href='#projetos'>Projetos</Link>
         </nav>
-        <div className={styles.mobileMenu}>
+        {/* <div className={styles.mobileMenu}>
           <button
             onClick={handleOpenMenu}
           >
@@ -51,7 +51,7 @@ export function Header() {
               <Link href='#projetos'>Projetos</Link>
             </nav>
           </Modal>
-        </div>
+        </div> */}
       </div>
     </header>
   )
