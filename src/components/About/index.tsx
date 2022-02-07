@@ -4,9 +4,7 @@ import Link from 'next/link';
 
 export function About({ resume }) {
   const getResumeLink = resume.map(res => res);
-  const resumeLink = getResumeLink[0];
-  console.log(resumeLink);
-  
+  const resumeLink = getResumeLink[0]; 
   
   return (
     <div className={styles.aboutContainer}>
