@@ -35,7 +35,7 @@ export function About({ resume }) {
               </div> */}
               <div className={styles.aboutButtons}>
                 <Link href={resumeLink}>
-                  <a target="_blank">
+                  <a target="_blank" rel="noreferrer">
                     <button className={styles.margentaPurpleBorder}>
                       <div className={styles.buttonContent}>
                         <Image 
