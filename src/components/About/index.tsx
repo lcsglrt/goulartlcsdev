@@ -21,9 +21,6 @@ export function About({ resume }) {
               alt="Lucas Goulart"
               width={500}
               height={500}
-              layout='responsive'
-              objectFit='cover'
-              
             />
           </div>
             <div>
