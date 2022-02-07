@@ -14,15 +14,19 @@
     display: flex;
 
     .profilePicture {
-      max-width: 367px;
-      max-height: 367px;
+      width: 100%;
 
       border-bottom: 4px solid var(--cyan-500);
       border-left: 4px solid var(--cyan-500);
 
       border-radius: 50%;
-
+      
       margin-right: 8rem;
+      
+      .profileImage {
+        border-radius: 50%;
+        border-left: 4px solid var(--cyan-500);
+      }
     }
 
     h3 {

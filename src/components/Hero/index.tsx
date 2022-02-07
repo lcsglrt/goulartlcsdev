@@ -1,4 +1,6 @@
 import styles from './styles.module.scss';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export function Hero() {
   return (
@@ -10,28 +12,42 @@ export function Hero() {
           <p>e sou desenvolvedor front-end</p>
         </div>
         <div className={styles.heroButtons}>
-          <a 
+          <Link 
             href='https://www.linkedin.com/in/goulartlcs'
-            target="_blank"
           >
-            <button className={styles.purpleCyanBorder}>
-              <div className={styles.buttonContent}>
-                <img src='/assets/icons/linkedin.svg' alt='LinkedIn' />
-                <p>LinkedIn</p>
-              </div>
-            </button> 
-          </a>
-          <a 
+            <a target='_blank'>
+              <button className={styles.purpleCyanBorder}>
+                <div className={styles.buttonContent}>
+                  <Image 
+                    width={24}
+                    height={24}
+                    src='/assets/icons/linkedin.svg'
+                  alt='LinkedIn' 
+                  />
+                  <p>LinkedIn</p>
+                </div>
+              </button> 
+              </a>
+          </Link>
+          <Link
             href='https://github.com/goulartlcs'
-            target="_blank"
           >
-            <button className={styles.margentaPurpleBorder}>
-              <div className={styles.buttonContent}>
-                <img src='/assets/icons/github.svg' alt='GitHub' />
-                <p>GitHub</p>
-              </div>
-            </button> 
-          </a>
+            <a 
+              target="_blank"
+            >
+              <button className={styles.margentaPurpleBorder}>
+                <div className={styles.buttonContent}>
+                  <img 
+                    width={24}
+                    height={24}
+                    src='/assets/icons/github.svg' 
+                    alt='GitHub' 
+                  />
+                  <p>GitHub</p>
+                </div>
+              </button> 
+            </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import styles from './styles.module.scss';
 import Modal from 'react-modal';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export function Header() {
   const [menuModalIsOpen, setMenuModalIsOpen] = useState(false);
@@ -18,26 +20,31 @@ export function Header() {
       <div className={styles.headerContent}>
         <h1 className={styles.title}>Goulart LCS</h1>
         <nav>
-          <a href="/">Home</a>
-          <a href="#sobre-mim">Sobre Mim</a>
-          <a href="#experiencias">Experiências</a>
-          <a href="#projetos">Projetos</a>
+          <Link href='/'>Home</Link>
+          <Link href='#sobre-mim'>Sobre Mim</Link>
+          <Link href='#experiencias'>Experiências</Link>
+          <Link href='#projetos'>Projetos</Link>
         </nav>
         <div className={styles.mobileMenu}>
           <button
             onClick={handleOpenMenu}
           >
-            <img src="/assets/icons/menu.svg" alt="Menu" />
+            <Image 
+              width={24}
+              height={24}
+              src="/assets/icons/menu.svg" 
+              alt="Menu" 
+            />
           </button>
           <Modal
             isOpen={menuModalIsOpen}
             onRequestClose={() => setMenuModalIsOpen(false)}
           >
             <nav>
-              <a href="/">Home</a>
-              <a href="#sobre-mim">Sobre Mim</a>
-              <a href="#experiencias">Experiências</a>
-              <a href="#projetos">Projetos</a>
+              <Link href='/'>Home</Link>
+              <Link href='#sobre-mim'>Sobre Mim</Link>
+              <Link href='#experiencias'>Experiências</Link>
+              <Link href='#projetos'>Projetos</Link>
             </nav>
           </Modal>
         </div>

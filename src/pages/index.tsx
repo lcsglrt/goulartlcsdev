@@ -80,6 +80,9 @@ export const getStaticProps: GetStaticProps = async () => {
   });  
 
   const resume = filterResume.map(resume => resume.url);
+
+  console.log(resume);
+  
  
   return {
     props: { 
