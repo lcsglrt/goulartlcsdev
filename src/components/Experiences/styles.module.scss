@@ -1,0 +1,112 @@
+.experiencesContainer {
+  background: var(--gray-800);
+
+  padding: 0 2rem;
+}
+
+.experiencesContent {
+  max-width: 1120px;
+  margin: 0 auto;
+
+  section {
+    padding: 6rem 0;
+
+    .experiencesList {
+      display: flex;
+    }
+    
+    aside {
+      flex-basis: 376px;
+      flex-shrink: 0;
+  
+      li {
+        color: var(--gray-500);
+        font-weight: 300;
+  
+        padding: 1rem 0 1rem 2rem;
+  
+        button {
+          all: unset;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+  
+      .selected {
+        font-size: 1rem;
+  
+        border-left: 2px solid var(--cyan-500);
+        background: var(--gray-700);
+  
+        button {
+          font-weight: 500;
+          color: var(--white);
+        }
+      }
+    }
+
+    .experienceDetails {
+      margin-left: 6rem;
+      flex-grow: 1;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+          font-size: 1.2rem;
+          margin-bottom: 1.5rem;
+        }
+
+        time {
+          font-size: 1rem;
+        }
+      }
+
+      h6 {
+        color: var(--cyan-500);
+        font-weight: 500;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        color: var(--gray-500);
+        font-weight: 300;
+        line-height: 1.8rem;
+        height: 7.6rem
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .experiencesContent {
+    section {
+      aside {
+        flex-basis: 0;
+      }
+
+      .experienceDetails {
+        margin-left: 0;
+        margin-top: 4rem;
+      }
+    }
+  }
+
+  .experiencesList {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1080px) {
+  .experiencesContent {
+    section {
+      aside {
+        flex-basis: 25vw;
+      }
+    }
+  }
+}
